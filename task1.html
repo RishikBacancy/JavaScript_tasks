@@ -40,6 +40,12 @@
         selectItem = document.getElementsByTagName("div");
         console.log("Selected By tag-name",selectItem);
 
+        selectItem = document.querySelector(".u-List");
+        console.log("Selected By query-selector",selectItem);
+
+        selectItem = document.querySelectorAll(".listItems");
+        console.log("Selected By query-selector-all",selectItem);
+
         selectItem = document.body;
         selectItem.style.backgroundColor = "green";
 
