@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Task 1</title>
+    </head>
+
+    <body>
+        <h1 id="heading">Here Is some elements</h1>
+        <div class="u-List">
+            <ul name="myList">
+                <div class="listItems">
+                    <li id="item1">List Item 1</li>
+                </div>
+                <div class="listItems">
+                    <li id="item2">List Item 2</li>
+                </div>
+                <div class="listItems">
+                    <li id="item3">List Item 3</li>
+                </div>
+                <div class="listItems">
+                    <li id="item4">List Item 4</li>
+                </div>
+                <div class="listItems">
+                    <li id="item5">List Item 5</li>
+                </div>
+            </ul>
+        </div>
+    </body>
+
+    <script>
+
+        var selectItem = document.getElementById("item1");
+        console.log("Selected By id",selectItem);
+
+        selectItem = document.getElementsByClassName("listItems")
+        console.log("Selected By class-name",selectItem);
+
+        selectItem = document.getElementsByName("myList");
+        console.log("Selected By name",selectItem);
+
+        selectItem = document.getElementsByTagName("div");
+        console.log("Selected By tag-name",selectItem);
+
+        selectItem = document.body;
+        selectItem.style.backgroundColor = "green";
+
+    </script>
+
+</html>
