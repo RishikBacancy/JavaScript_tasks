@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <title>Task 2</title>
+    </head>
+    
+    <body>
+
+        <div class="form-container">
+            <form class="form-class">
+                <div id="myform" class="input-div">
+                    <label>Name</label>
+                    <input type="text" name="name" id="name" required placeholder="Name">
+                </div>
+
+                <div class="input-div">
+                    <label>Gender</label>
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label>Male</label>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label>Female</label>
+                </div>
+
+                <div class="input-div">
+
+                    <label>Technology</label>
+                    <select id="technology" name="technology">
+                        <option value="React-native" selected>React-native</option>
+                        <option value="ROR">ROR</option>
+                        <option value="vue-jS">Vue JS</option>
+                        <option value="flutter">Fluttter</option>
+                    </select>
+
+                </div>
+
+                <div class="input-div">
+
+                    <input type="checkbox" id="age" name="age" value="Above-18">
+                    <label>Above 18</label>
+
+                </div>
+
+                <div class="button-div">
+
+                    <input type="button" onclick="getData()" name="submit" value="Submit">
+
+                </div>
+
+                <table id="table1" border="1"></table>
+
+            </form>
+        </div>
+
+        <script type="text/javascript">
+
+            function getData()
+            {
+                var row =  document.createElement("tr");
+                var col1 =  document.createElement("td");
+                var col2 =  document.createElement("td");
+                var col3 =  document.createElement("td");
+                var col4 =  document.createElement("td");
+
+                row.appendChild(col1);
+                row.appendChild(col2);
+                row.appendChild(col3);
+                row.appendChild(col4);
+                table1.appendChild(row);
+
+                
+                col1.innerHTML = document.querySelector("input[name=name]").value;
+                col2.innerHTML = document.querySelector("input[name=gender]:checked").value;
+                col3.innerHTML = document.querySelector("#technology").value;
+                var ageCheck = document.querySelector("#age:checked");
+                if(ageCheck != null)
+                {
+                    col4.innerHTML = ageCheck.value;
+                }
+                else
+                {
+                    col4.innerHTML = "Below 18";
+                }
+
+                document.forms[0].reset();
+               
+            }
+
+        </script>
+
+    </body>
+</html>
